@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content%}
+<style>
+    .carousel-item img {
+      object-fit: cover;
+      height: 216px; /* ou la hauteur souhaitée */
+      width: 100%;
+    }
+  </style>
+  
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner mt-4">
+          <div class="carousel-item active">
+              <img src="https://i.ytimg.com/vi/QipIufCH3rw/maxresdefault.jpg" class="d-block w-100" alt="...">
+          </div>
+      </div>
+  </div>
+  
+    </div>
+    <div class="container mt-5 mb-5">
+        <h3>Evènements de la semaine</h3>
+        <div class="row">
+            <div class="col-lg-4 mt-4"> 
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://www.clubs.ma/assets/images/morocco-swim-trek-2023/evenement/photo/r2df96JTSAy7rHUu2fuy9F2YcZbN0MmpUjNCUeaM.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Morocco Swim Trek </h5>
+                        <p class="card-text">Le Morocco Swim Trek  est une incroyable compétition de natation en eau libre qui se déroulera du 28 novembre au 3 décembre 2023 à Dakhla, au Maroc. Cette compétition est ouverte à tous les nageurs, qu'ils soient amateurs ou professionnels, et offre une aventure unique.</p>
+                        <a href="#" class="btn btn-warning">Voir plus</a>
+                        <a href="{% url 'réserver' %}" class="btn btn-primary">Réserver</a>
+                        
+                    </div>
+                </div> 
+            </div>
+    
+            <div class="col-lg-4 mt-4"> 
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://www.clubs.ma/assets/images/atlas-mountain-race-2024/evenement/photo/1Rc6djHoQtVGvZjgafyMMiKwfneEg1zca68bs68U.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Atlas Mountain Race </h5>
+                        <p class="card-text">Plongez au cœur de l'action cycliste non assistée avec l'Atlas Mountain Race , une course à étape unique qui défie les limites des coureurs. Du 9 au 17 février, Marrakech servira de point de départ pour cette aventure captivante à travers l'Atlas marocain, l'Anti-Atlas, jusqu'à l'arrivée triomph.</p>
+                        <a href="#" class="btn btn-warning">Voir plus</a>
+                        <a href="{% url 'réserver' %}" class="btn btn-primary">Réserver</a>
+                    </div>
+                </div> 
+            </div>
+    
+            <div class="col-lg-4 mt-4"> 
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="https://www.clubs.ma/assets/images/sahraouiya-2024-un-defi-sportif-et-solidaire/evenement/photo/YHQaBXFgOF5yvc6R8h7eRycrm2Vz1LkGfm1MecBn.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sahraouiya </h5>
+                        <p class="card-text"> La 10ème édition du Raid La Sahraouiya se tiendra du 3 au 10 février 2024, offrant une expérience unique dans la splendide région de Dakhla. Cet événement annuel propose un programme varié avec des épreuves telles que VTT, Trail, Course d’orientation, Trail de nuit, VTT d’orientation, Boot Camp, </p>
+                        <a href="#" class="btn btn-warning">Voir plus</a>
+                        <a href="{% url 'réserver' %}" class="btn btn-primary">Réserver</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+    
+  
+{% endblock %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Activities</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+</head>
+<body>
+
+<!-- Top menu -->        
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <a href="/" class="w3-bar-item w3-button">Accueil</a>
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"></div>
+    <div class="w3-center w3-padding-16">Activities</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://www.promoimmomarrakech.com/assets/img/actualite/quad-sahara-maroc.jpg" alt="" style="width:100%">
+      <h3>Traverser le désert en quad </h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/rafting-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Embarquer pour du rafting</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/montgolfiere-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Prendre de la hauteur en montgolfière</h3>
+      
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/accrobranche-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Surmonter ses peurs à l accrobranche</h3>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/hammam-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Se reposer en thalassothérapie</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/bivouac-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Camper comme les berbères</h3>
+     
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/ski_5ecb66f6eb91b40006aeaa79-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Faire du ski dans l’Atlas</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.voyage-maroc.com/cdn/ma-public/trek-MAX-w1000h600.jpg" alt="" style="width:100%">
+      <h3>Partir en Trek</h3>
+    </div>
+  </div>
+
+  <!-- Bouton Fermer -->
+  <button class="w3-button w3-black text-center" onclick="closeAndRedirect()">Fermer</button>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function closeAndRedirect() {
+  window.close(); // Fermer la fenêtre actuelle
+  window.location.href = "/"; // Rediriger vers la page d'accueil
+}
+</script>
+
+</body>
+</html>
